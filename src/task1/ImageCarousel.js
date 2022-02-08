@@ -1,7 +1,7 @@
 import React from "react";
-import { fetchImages } from "./api/index";
+import { fetchImages } from "../api/index";
 
-const ImageCarousle = (props) => {
+const ImageCarousel = (props) => {
     return <h1>Your code goes here</h1>;
 };
-export default ImageCarousle;
+export default ImageCarousel;

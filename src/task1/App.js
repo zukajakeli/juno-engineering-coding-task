@@ -1,11 +1,13 @@
-import React from "react";
-import ImageCarousle from "./ImageCarousle";
-import "./styles.css";
+import logo from '../logo.svg';
+import './App.css';
+import ImageCarousel from "./ImageCarousel";
 
-export default function App() {
-    return (
-        <div className="App">
-            <ImageCarousle />
-        </div>
-    );
+function App() {
+  return (
+      <div>
+        <ImageCarousel />
+      </div>
+  );
 }
+
+export default App;
