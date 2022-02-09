@@ -14,7 +14,7 @@ The api folder provides basic infrastructure to both tasks, and should be kept u
 
 ## First Task:
 Create an image carousel that looks similar to this (and not necessarily exact):
-<img src="https://drive.google.com/file/d/16q70tP7pVvbnZmIgdpQgvWuZ_WuPL0Jg/view?usp=sharing">
+<img src="https://firebasestorage.googleapis.com/v0/b/juno-multi-test.appspot.com/o/public%2Fimage.png?alt=media&token=50efb126-617f-4abc-962d-e4770c2f9b8c">
 The carousel is circular - clicking "next" on the last image will show the first image, and clicking "previous" on the first image will show the last image.
 Using material-UI components is a bonus. Please implement the carousel yourself, using third party libraries for this purpose is not allowed.
 
