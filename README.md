@@ -1,12 +1,12 @@
 # Juno Journey's Engineering Coding Task
 ## Instructions
 This coding task is used to evaluate new hires for Juno Journey's Engineering Team.
-You should [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository to your personal [Github](www.github.com) account.
-Please share your forked repository with the Github user [markjuno](https://github.com/markjuno).
 The whole task should take around 1.5 hours.
 
+You should [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository to your personal [Github](www.github.com) account.
+Please share your forked repository with the Github user [markjuno](https://github.com/markjuno).
 All the code you write should work, should be clean, and use best practices you are familiar with.
-Testing is very recommended. 
+<b>Testing is very recommended.</b> 
 
 ## Structure
 Your code should go under src/task1 & src/task2.
