@@ -12,22 +12,27 @@ Use ``` npm install ``` in the project root to set up.
 
 ## Structure
 Your code should go under src/task1 & src/task2.
-The api folder provides basic infrastructure to both tasks, and should be kept untouched.
+The api folder provides basic infrastructure to both tasks, and <b>should be kept untouched.</b>
 
 ## First Task:
 Create an image carousel that looks similar to this (and not necessarily exact):
 <img src="https://firebasestorage.googleapis.com/v0/b/juno-multi-test.appspot.com/o/public%2Fimage.png?alt=media&token=50efb126-617f-4abc-962d-e4770c2f9b8c"><br>
-The carousel is circular - clicking "next" on the last image will show the first image, and clicking "previous" on the first image will show the last image.
-Using material-UI components is a bonus. Please implement the carousel yourself, using third party libraries for this purpose is not allowed.
 
 Use ``` npm run start ``` in the project root to run the carousel app.
 
+### Requirements
+* The carousel is circular - clicking "next" on the last image will show the first image, and clicking "previous" on the first image will show the last image.
+* Implement a loading state. Carousel image should show loading state until fully fetched (partial images should not be shown). You can use both fetchImage(index) & fetchImages().
+* Implement an empty state
+* Bonus: using material-UI components.
+* Bonus: prefetch images (about to be shown) to lower loading state times.
+* Please implement the carousel yourself, using third party libraries for this purpose is not allowed.
+
 ## Second Task:
-no setup needed, you can run the
-Implement the TODOs in /task2/submission_e-commerce.js.
+Implement the TODOs in /task2/ecommerce.js.
 
 Consider an e-commerce website (Amazon for example) with DB which stores users' orders.
 You should write in total four JavaScript functions, it is recommended to do it in appearing order.
 The instructions are specified in TODO comments.
 
-Use you preferred way (node, tests) to run and debug the methods.
+Use you preferred way (node , ecommerce.test.js) to run and debug the methods.
