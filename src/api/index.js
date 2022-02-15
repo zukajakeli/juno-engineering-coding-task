@@ -163,7 +163,7 @@ const imageUrls = [
     "https://images.unsplash.com/photo-1644846577076-d57c4c89581e?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMDE1OTd8MHwxfGFsbHwzMHx8fHx8fDJ8fDE2NDQ4NzAwMjU&ixlib=rb-1.2.1&q=85"
 ]
 
-export function fetchImagesUrls() {
+export function fetchImageUrls() {
     return setTimeoutPromise(500, imageUrls);
 }
 
