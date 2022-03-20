@@ -25,9 +25,10 @@ Use ``` npm run start ``` in the project root to run the carousel app.
 * Implement a loading state. Carousel image should show loading state until fully fetched (partial images should not be shown). You can use both fetchImage(index) & fetchImages().
 * Implement an empty state
 * Basic tests for your components.
-* Bonus: using material-UI components.
-* Bonus: prefetch images (about to be shown) to lower loading state times.
-* Please implement the carousel yourself, using third party libraries for this purpose is not allowed.
+* <b>Bonus:</b> using material-UI components.
+* <b>Bonus:</b> prefetch images (about to be shown) to lower loading state times.
+
+Please implement the carousel yourself, using third party libraries for this purpose is not allowed.
 
 ## Second Task:
 Implement the TODOs in /task2/ecommerce.js.
