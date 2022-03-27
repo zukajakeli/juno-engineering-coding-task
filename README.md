@@ -4,7 +4,7 @@ This coding task is used to evaluate new hires for Juno Journey's Engineering Te
 The whole task should take around 1.5 hours.
 
 You should [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository to your personal [Github](www.github.com) account.
-Please invite [markjuno](https://github.com/markjuno) and [jkorach](https://github.com/jkorach) to your fork.
+Please invite [markjuno](https://github.com/markjuno) and [Noapel](https://github.com/Noapel) to your fork.
 All the code you write should work, should be clean, and use best practices you are familiar with.
 <b>Testing is mandatory.</b>
 
