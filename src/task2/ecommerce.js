@@ -1,5 +1,6 @@
 ////////////////////////////////////////////// Helper code, do not edit /////////////////////////////////////////
 import { allIds, fetchOrderById } from "../api";
+import { convertTimeToDays, getOrdersKey } from "./helpers";
 
 ////////////////////////////////// Your code tasks is below //////////////////////////////////////////////////////
 
@@ -40,9 +41,6 @@ export const getLast2WeeksOrders = async () => {
   //   3. TODO: fetch all Ids and return array with only the last 2 weeks orders. make it work as efficient and clean as possible.
   let last2WeekOrders = [];
   const now = new Date().getTime();
-  const convertTimeToDays = (timestamp) => {
-    return timestamp / (24 * 60 * 60 * 100);
-  };
 
   await fetchAllOrders().then((res) => {
     res.forEach((item) => {
@@ -53,25 +51,23 @@ export const getLast2WeeksOrders = async () => {
   });
 
   return last2WeekOrders;
+
+  //As third party libraries are no allowed, I used vanilla javascript to calculate date operations,
+  // otherwise I would use moment.js or other third party library.
 };
 
-const bucketOrdersByDate = async () => {
+export const bucketOrdersByDate = async () => {
   //   4. TODO: using the function from section 3 bucket the orders by date.
   // each key in the object (ordersByDate) represents a day and each value is an array of the orders in that date.
   let ordersByDate = {};
-  const getOrdersKey = (timestamp) => {
-    return new Date(timestamp).toDateString();
-  };
 
   await getLast2WeeksOrders().then((res) => {
     res.forEach((item) => {
-      if (ordersByDate[getOrdersKey(item.timestamp)]) {
-        ordersByDate[getOrdersKey(item.timestamp)] = [
-          ...ordersByDate[getOrdersKey(item.timestamp)],
-          item.title,
-        ];
+      const key = getOrdersKey(item.timestamp);
+      if (ordersByDate[key]) {
+        ordersByDate[key] = [...ordersByDate[key], item.title];
       } else {
-        ordersByDate[getOrdersKey(item.timestamp)] = [item.title];
+        ordersByDate[key] = [item.title];
       }
     });
   });

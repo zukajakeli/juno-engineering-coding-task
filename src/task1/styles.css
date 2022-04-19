@@ -20,7 +20,8 @@
 
 .selected-image {
   width: 500px;
-  height: 500px;
+  height: auto;
+  object-fit: cover;
 }
 
 .selected-image--hidden {

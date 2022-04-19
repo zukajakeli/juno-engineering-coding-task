@@ -16,19 +16,41 @@ const ImageCarousel = (props) => {
   useEffect(() => {
     fetchImageUrls().then((res) => {
       setImagesArray(res);
+      const nextImg = new Image();
+      const prevImg = new Image();
+      nextImg.src = res[1];
+      prevImg.src = res[res.length - 1];
+
+      setIsImageLoaded(true);
     });
+    setSelectedImageNumber(0);
   }, []);
 
   const selectNextImage = useCallback(() => {
     setSelectedImageNumber((prev) => {
-      return prev === imagesArray.length - 1 ? 0 : prev + 1;
+      const img = new Image();
+      if (prev === imagesArray.length) {
+        img.src = imagesArray[1];
+        return 0;
+      } else {
+        img.src = imagesArray[prev + 2];
+        return prev + 1;
+      }
     });
     setIsImageLoaded(false);
   }, [imagesArray]);
 
   const selectPrevImage = useCallback(() => {
     setSelectedImageNumber((prev) => {
-      return selectedImageNumber === 0 ? imagesArray.length - 1 : prev - 1;
+      const img = new Image();
+
+      if (selectedImageNumber === 0) {
+        img.src = imagesArray[imagesArray.length - 2];
+        return imagesArray.length - 1;
+      } else {
+        img.src = imagesArray[prev - 2];
+        return prev - 1;
+      }
     });
     setIsImageLoaded(false);
   }, [imagesArray, selectedImageNumber]);
