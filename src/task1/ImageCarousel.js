@@ -5,6 +5,7 @@ import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOu
 import HourglassBottomOutlinedIcon from "@mui/icons-material/HourglassBottomOutlined";
 
 import { fetchImageUrls } from "../api/index";
+import { preloadImage } from "./helpers";
 
 import "./styles.css";
 
@@ -16,10 +17,8 @@ const ImageCarousel = (props) => {
   useEffect(() => {
     fetchImageUrls().then((res) => {
       setImagesArray(res);
-      const nextImg = new Image();
-      const prevImg = new Image();
-      nextImg.src = res[1];
-      prevImg.src = res[res.length - 1];
+      preloadImage(res[1]);
+      preloadImage(res[res.length - 1]);
 
       setIsImageLoaded(true);
     });
@@ -28,12 +27,11 @@ const ImageCarousel = (props) => {
 
   const selectNextImage = useCallback(() => {
     setSelectedImageNumber((prev) => {
-      const img = new Image();
       if (prev === imagesArray.length) {
-        img.src = imagesArray[1];
+        preloadImage(imagesArray[1]);
         return 0;
       } else {
-        img.src = imagesArray[prev + 2];
+        preloadImage(imagesArray[prev + 2]);
         return prev + 1;
       }
     });
@@ -42,13 +40,11 @@ const ImageCarousel = (props) => {
 
   const selectPrevImage = useCallback(() => {
     setSelectedImageNumber((prev) => {
-      const img = new Image();
-
       if (selectedImageNumber === 0) {
-        img.src = imagesArray[imagesArray.length - 2];
+        preloadImage(imagesArray[imagesArray.length - 2]);
         return imagesArray.length - 1;
       } else {
-        img.src = imagesArray[prev - 2];
+        preloadImage(imagesArray[prev - 2]);
         return prev - 1;
       }
     });
