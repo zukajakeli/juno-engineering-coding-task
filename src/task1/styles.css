@@ -1,4 +1,28 @@
 .App {
-    font-family: sans-serif;
-    text-align: center;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.prev-button,
+.next-button {
+  cursor: pointer;
+  font-size: 35px !important;
+}
+
+.selected-image {
+  width: 500px;
+  height: 500px;
+}
+
+.selected-image--hidden {
+  display: none;
 }
